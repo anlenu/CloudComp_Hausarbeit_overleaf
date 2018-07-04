@@ -1,5 +1,5 @@
 \section{Das Modell}
-Im folgenden Abschnitt soll das in Abbildung \ref{fig:ccmodel} zu sehende Modell detailliert beschrieben und der Prozess der Erstellung kurz erläutert werden. Dies soll zum Verständnis des Modells dienen und die gewählte Darstellung nachvollziehbar erläutern.
+Im folgenden Abschnitt soll das in \ref{fig:ccmodel} gezeigte Modell zur Beschreibung von DNS-Cloud-Services detailliert erläutert werden. Dies soll zum Verständnis und als Hilfe bei der Anwendung dienen. Außerdem soll es die gewählte Darstellungsform und Notation beleuchten, die zur Erstellung des Modells genutzt wurde.
 
 \begin{sidewaysfigure*}[ht]
     \includegraphics[width=\textwidth]{images/cc_modelxml.png}
@@ -7,10 +7,10 @@ Im folgenden Abschnitt soll das in Abbildung \ref{fig:ccmodel} zu sehende Modell
     \label{fig:ccmodel}
 \end{sidewaysfigure*}
 
-\subsection{Erstellung des Modells}
-Zunächst war es notwendig sich auf dem Markt umzusehen um geeignete Anbieter von Cloud-Dienstleistern zu identifizieren. Anschließend wurden Kriterien gewählt, anhand deren die Anzahl der Alternativen eingeschränkt wurde. Daraufhin war es notwendig einen Einblick in die ausgewählten DNS-Services zu erlangen, die Funktionsweise dieser nachzuvollziehen und zu studieren. 
+\subsection{Schnittstellen}
+Zur Nutzung der DNS-Cloud-Services stehen unterschiedliche Möglichkeiten zur Verfügung. Wird ein neues Benutzerkonto angelegt, geschieht dies über eine Weboberfläche. Nach der Einrichtung ist es möglich über die Benutzeroberfläche der Internetseite auf das Produktportfolio des Dienstleisters zuzugreifen. Sämtliche Interaktionen mit dem Cloud-Service sind über diese Weboberfläche möglich. So kann der Kunde jederzeit und von jedem internetfähigen Gerät, plattformunabhängig über den Browser seines Betriebssystems auf die Services zugreifen. Das bedeutet, dass keine Installation von zusätzlichen Anwendungen oder Treibern notwendig ist.
 
-\subsection{Auswahl der Cloud-DNS-Serviceprovider}
-Der Markt an DNS-Serviceprovidern ist enorm groß. Das meist genutzte Benchmark zum Vergleich von DNS-Services ist offensichtlich die benötigte Zeit zur direkten Auflösung einer DNS-Querry. Laut des DNS-Benchmarking Service \textit{DNSPerf} sind die Abweichungen der ersten 30 Plätze hier bei gerade einmal 30ms. Auch die Verfügbarkeit der einzelnen DNS-Server beläuft sich in den letzten 6 Monaten bei den ersten 30 Plätzen ebenfalls durchgängig bei 100\%. Bei anderen Benchmarking-Services waren ebenfalls ähnliche Werte zu verzeichnen.
+Eine weitere Möglichkeit ist der Zugriff über eine Schnittstelle zur Anwendungsprogrammierung (API). Diese Schnittstellen ermöglichen es über Kommandozeilenwerkzeuge auf die Services des Cloud-Providers zuzugreifen. Somit können auch ohne die Hilfe des Webinterfaces  administrative Aufgaben bezüglich der Cloud erledigt werden. Des Weiteren ist es möglich über Skriptsprachen Routineaufgaben zu automatisieren oder den Cloud-Service in eine unternehmensinterne Software einzubinden. Dies bringt den Vorteil eines flexibleren Umgangs und einer bessere Einbindung des Cloud-Services in die alltäglichen Prozesse.
 
-Da eine Abweichung von 30ms bei der Bearbeitung einer DNS-Querry bei den meisten Endnutzern im täglichen Gebrauch kaum ins Gewicht fallen dürfte, wurde dies im weiteren Verlauf nicht weiter berücksichtigt. Auch eine Verfügbarkeit von 100\% scheint dem allgemeinen Standard zu entsprechen.
+ \subsection{Hosted Zones}
+ 
