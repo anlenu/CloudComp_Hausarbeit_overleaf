@@ -23,8 +23,10 @@
 
 
 
-\usepackage[german]{babel}
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}
+%\usepackage{ngerman}
+
+%\usepackage{breakurl}
 
 
 
@@ -230,13 +232,13 @@
 
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
-\usepackage{url}
+%\usepackage{url}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version and documentation can be obtained at:
 % http://www.ctan.org/pkg/url
 % Basically, \url{my_url_here}.
-
+\usepackage[hyphens]{url}
 
 
 
@@ -254,7 +256,7 @@
 \begin{document}
 %
 
-\title{Cloud Computing Hausarbeit}
+\title{Cloud Computing DNS Dienst: Route 53}
 
 
 \author{\IEEEauthorblockN{Andreas Leopold N\"uchter}
@@ -383,13 +385,7 @@ I wish you the best of success.
 % footnotes above bottom floats. This can be corrected via the
 % \fnbelowfloat command of the stfloats package.
 
-
-
 \input{content.tex}
-
-
-
-
 
 
 
