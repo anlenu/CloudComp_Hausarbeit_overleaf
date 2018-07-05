@@ -67,5 +67,17 @@ Die Argumente, die für eine kürzere oder längere TTL sprechen wurden bereits 
 \subsection{Traffic Management}
 Der im Modell lila eingezeichnete Bereich \textit{Traffic Management} bezieht sich auf das Themengebiet Load-Balancing und Routing. Hier werden bei Anfragen an den DNS-Service je nach festgelegter Routing-Information unterschiedliche Werte an den Client zurückgeliefert. 
 
-Jeder der drei Dienstleister bietet die dargestellten Funktionen an. Jedoch werden jeweils andere Ansätze in der Abrenzung der Funktionalitäten gewählt. Während bei \textit{AWS Route53} die Möglichkeiten zum Überwachen der Ressourcen, Routing und Load-Balancing im Service selbst enthalten sind, bietet Microsoft Azures DNS-Service diese Funktionen ausgelagert in dem eigenständigen Service \textit{Traffic Manager} an. Auch Google stellt diese Funktionen unter dem Service \textit{Load Balancing} zu Verfügung.
+Jeder der drei Dienstleister bietet die dargestellten Funktionen an, jedoch werden jeweils andere Ansätze in der Abrenzung der Funktionalitäten gewählt. Während bei \textit{AWS Route53} die Möglichkeiten zum Überwachen der Ressourcen, Routing und Load-Balancing im Service selbst enthalten sind, bietet Microsoft Azures DNS-Service diese Funktionen ausgelagert in dem eigenständigen Service \textit{Traffic Manager} an. Auch Google stellt diese Funktionen unter dem Service \textit{Load Balancing} zu Verfügung.Die Darstellung im Modell wurde vor allem auf Basis des Angebots von AWS und Microsoft Azure gewählt.
 
+\subsection{Routing Information}
+Folgend sollen die im Modell dargestellten Routingarten kurz vorgestellt werden um einen Einblick in deren Funktionalität zu erlangen.
+
+\subsubsection{Simple-Routing}
+Das Simple-Routing wird vor allem für die Verwaltung eines einzelnen Endpunktes verwendet. Hier wird für die entsprechende Domäne immer die gleiche Ressource als Ausgabewert zurückgegeben. Als Beispiel wäre hier ein lokaler Anbieter mit einem kleinen Fahrradshop zu nennen.
+
+\subsubsection{Failover-Routing}
+Bei der Failover-Routing Funktion kann ein zweiter Endpunkt angegeben werden. Ein Routing auf diesen zweiten Endpunkt findet dann statt, wenn die primäre Ressource nicht erreichbar ist. Die Umleitung könnte zum Beispiel auf einen Backup-Server stattfinden oder aber auch nur auf eine Hinweisseite, die dem Endkunden Informationen über den Status des erwarteten Service liefert. 
+
+Das Failover-Routing nutzt hierbei eine Funktion namens \textit{Health-Check}. Dies ist ein Service, der kontinuierlich eine Ressource überwacht. Es wird in einem festgelegten Intervall versucht den zu überwachenden Endpunkt anhand unterschiedlicher Protokolle zu erreichen. Überschreitet die Antwortzeit einen gewissen Toleranzwert oder wird ein unerwarteter Error Code zurückgeliefert, schlägt der Health-Check fehl und der Nutzer wird über den Ausfall informiert. Hierbei können sowohl die genutzten Protokolle, die Toleranzwerte als auch das Intervall zur Durchführung des Health-Check angepasst werden. So ist es möglich mehr oder weniger kritische Ressourcen zu prüfen.
+
+\subsubsection{}
