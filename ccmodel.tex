@@ -62,3 +62,10 @@ wird meist für Reverse-Lookup verwendet. Ist quasi das Gegenstück zum A- oder 
 Hier kann der Time-to-Live Wert für den DNS-Record angegeben werden. Dieser gibt an, wie lange der DNS-Record bei rekursiven DNS-Servern im Cache als gültig angesehen werden darf. Als Maßeinheit werden Sekunden genutzt. 
 
 Die Argumente, die für eine kürzere oder längere TTL sprechen wurden bereits in Abschnitt \ref{lab:ttl} diskutiert. Außerdem wurde eine Best-Practice Methode aufgezeigt, die bei bevorstehenden Änderungen am System eingesetzt werden kann um einen reibungslosen Übergang zwischen Änderungen zu gewährleisten. Hinzuzufügen ist, dass Amazon aws Route53 als Empfehlung gibt einen Wert von cirka 60 Sekunden anzugeben, falls ihr Health-Check Service in Anspruch genommen wird.
+
+
+\subsection{Traffic Management}
+Der im Modell lila eingezeichnete Bereich \textit{Traffic Management} bezieht sich auf das Themengebiet Load-Balancing und Routing. Hier werden bei Anfragen an den DNS-Service je nach festgelegter Routing-Information unterschiedliche Werte an den Client zurückgeliefert. 
+
+Jeder der drei Dienstleister bietet die dargestellten Funktionen an. Jedoch werden jeweils andere Ansätze in der Abrenzung der Funktionalitäten gewählt. Während bei \textit{AWS Route53} die Möglichkeiten zum Überwachen der Ressourcen, Routing und Load-Balancing im Service selbst enthalten sind, bietet Microsoft Azures DNS-Service diese Funktionen ausgelagert in dem eigenständigen Service \textit{Traffic Manager} an. Auch Google stellt diese Funktionen unter dem Service \textit{Load Balancing} zu Verfügung.
+
